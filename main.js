@@ -109,4 +109,4 @@ client.once('ready', () => {
     console.log('Here comes the boyyyy')
 });
 
-client.login('OTI1NDc5MTM3NjEzODUyNzQz.YcttnA.o5bPh3_SBqFwjU_WGRdMfL0A4No');
+client.login(); //FIX THE TOKEN LATER
