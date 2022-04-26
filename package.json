@@ -1,0 +1,13 @@
+{
+  "name": "sadshrimpbot",
+  "version": "1.4.0",
+  "description": "a cute little agent of chaos",
+  "main": "main.js",
+  "scripts": {},
+  "author": "rachow",
+  "license": "ISC",
+  "dependencies": {
+    "@discordjs/voice": "^0.7.5",
+    "discord.js": "^13.4.0"
+  }
+}
