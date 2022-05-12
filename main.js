@@ -2,6 +2,7 @@
 
 const Discord = require('discord.js');
 const client = new Discord.Client({ intents: ["GUILD_VOICE_STATES", "GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS"] });
+const config = require('./config');
 
 const prefix = '-';
 const hey = 'hey travis';
@@ -109,4 +110,4 @@ client.once('ready', () => {
     console.log('Here comes the boyyyy')
 });
 
-client.login('OTI1NDc5MTM3NjEzODUyNzQz.YcttnA.o5bPh3_SBqFwjU_WGRdMfL0A4No');
+client.login(config.BOT_TOKEN);
