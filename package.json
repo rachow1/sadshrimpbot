@@ -4,7 +4,7 @@
   "description": "a cute little agent of chaos",
   "main": "main.js",
   "scripts": {
-    "start": "main"
+    "start": "node main.js"
   },
   "author": "rachow",
   "license": "ISC",
