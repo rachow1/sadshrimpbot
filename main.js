@@ -1,9 +1,12 @@
-﻿
+﻿require('dotenv').config();
+console.log(process.env);
+
+const fs = require('fs');
+
 //discord values
 const Discord = require('discord.js');
 const client = new Discord.Client({ intents: ["GUILD_VOICE_STATES", "GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS"] });
 //const config = require('./config');
-const fs = require('fs');
 
 //bot values
 const prefix = '-';
@@ -13,7 +16,6 @@ var hesitate = 0;
 //why do i have all dis doe?
 const { joinVoiceChannel } = require('@discordjs/voice');
 const { VoiceConnectionStatus, getVoiceConnection } = require('./node_modules/@discordjs/voice/dist/index');
-const { Console } = require('console');
 const { array } = require('./node_modules/zod/lib/types');
 
 client.commands = new Discord.Collection();
@@ -106,9 +108,8 @@ client.on('messageCreate', async message => {
 });
 
 
-
 client.once('ready', () => {
     console.log('Here comes the boyyyy')
 });
 
-client.login(BOT_TOKEN);
+client.login(process.env.BOT_TOKEN);
