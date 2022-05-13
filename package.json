@@ -1,9 +1,11 @@
 {
   "name": "sadshrimpbot",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "a cute little agent of chaos",
   "main": "main.js",
-  "scripts": {},
+  "scripts": {
+    "start": "main.js"
+  },
   "author": "rachow",
   "license": "ISC",
   "dependencies": {
