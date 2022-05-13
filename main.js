@@ -1,16 +1,16 @@
 ﻿
-
+//discord values
 const Discord = require('discord.js');
 const client = new Discord.Client({ intents: ["GUILD_VOICE_STATES", "GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS"] });
 const config = require('./config');
-
-const prefix = '-';
-const hey = 'hey travis';
-var isAlmighty = false;
-var connection;
-var hesitate = 0;
-var iniativeOrder = [];
 const fs = require('fs');
+
+//bot values
+const prefix = '-';
+var isAlmighty = false;
+var hesitate = 0;
+
+//why do i have all dis doe?
 const { joinVoiceChannel } = require('@discordjs/voice');
 const { VoiceConnectionStatus, getVoiceConnection } = require('./node_modules/@discordjs/voice/dist/index');
 const { Console } = require('console');
@@ -24,6 +24,7 @@ for (const file of commandFiles) {
 
     client.commands.set(command.name, command);
 }
+
 
 function checkCommands(message) {
 
