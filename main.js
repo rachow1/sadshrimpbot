@@ -2,7 +2,7 @@
 //discord values
 const Discord = require('discord.js');
 const client = new Discord.Client({ intents: ["GUILD_VOICE_STATES", "GUILDS", "GUILD_MESSAGES", "GUILD_MEMBERS"] });
-const config = require('./config');
+//const config = require('./config');
 const fs = require('fs');
 
 //bot values
@@ -111,4 +111,4 @@ client.once('ready', () => {
     console.log('Here comes the boyyyy')
 });
 
-client.login(config.BOT_TOKEN);
+client.login(BOT_TOKEN);
