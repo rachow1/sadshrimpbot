@@ -1,6 +1,7 @@
 ﻿if (process.env.NODE_ENV !== 'production')
     require('dotenv').config();
 const PORT = process.env.PORT || 3000;
+
 console.log(`Our app is running on port ${PORT}`);
 
 const fs = require('fs');
@@ -19,6 +20,7 @@ var hesitate = 0;
 const { joinVoiceChannel } = require('@discordjs/voice');
 const { VoiceConnectionStatus, getVoiceConnection } = require('./node_modules/@discordjs/voice/dist/index');
 const { array } = require('./node_modules/zod/lib/types');
+const { createServer } = require('http');
 
 client.commands = new Discord.Collection();
 
@@ -111,6 +113,9 @@ client.on('messageCreate', async message => {
 
 
 client.once('ready', () => {
+
+    const server = createServer();
+    server.listen(PORT);
     console.log('Here comes the boyyyy')
 });
 
